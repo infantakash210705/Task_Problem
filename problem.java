@@ -173,3 +173,73 @@ import java.util.*;
 // }
 
 
+///////////// Problem -> 7
+// given a sorted array, rearrange the elements in place to form a wave like array.
+// an array is said to be in wave form if:
+// arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4]
+// input:
+// 5
+// 1 2 3 4 5
+// output:
+// 2 1 4 3 5
+
+// public class problem {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         for(int i = 0; i < n - 1; i += 2){
+//             int temp = arr[i];
+//             arr[i] = arr[i + 1];
+//             arr[i + 1] = temp;
+//         }
+
+//         for(int i = 0; i < n; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+
+// Problem -> 8
+// given a non-negative number represented as an array of digits,
+// add one to the number and return the result as an array.
+// input:
+// 3
+// 1 2 4
+// output:
+// 1 2 5
+
+// public class problem {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         for(int i = n-1; i >= 0; i--){
+//             if(arr[i] < 9){
+//                 arr[i] = arr[i] + 1;
+//                 break;
+//             } else {
+//                 arr[i] = 0;
+//             }
+//         }
+
+//         if(arr[0] == 0) {
+//             System.out.print("1 ");
+//         }
+
+//         for(int i = 0; i < n; i++){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
