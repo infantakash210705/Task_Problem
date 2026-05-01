@@ -243,3 +243,230 @@ import java.util.*;
 //         }
 //     }
 // }
+
+
+
+// Date: 30/04/2026
+///////////// Problem -> 1
+// Given an array the task is to rearrange in alternative positive
+// and negative number without changing the relative order of positive
+// and negative numbers in case extra positive, 
+// negative they appear at the end of array
+
+// I/P: 1 2 3 -4 -1 4
+// O/P: 1 -4 2 -1 3 4
+
+// public class problem{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+        
+//         int[] pos = new int[n];
+//         int[] neg = new int[n];
+//         int p = 0, q = 0;
+
+//         for(int i = 0; i < n; i++){
+//             if(arr[i] >= 0){
+//                 pos[p++] = arr[i];
+//             } else {
+//                 neg[q++] = arr[i];
+//             }
+//         }
+
+//         int i = 0, j = 0, k = 0;
+
+//         while(i < p && j < q){
+//             arr[k++] = pos[i++];  
+//             arr[k++] = neg[j++];  
+//         }
+
+//         while(i < p){
+//             arr[k++] = pos[i++];
+//         }
+
+//         while(j < q){
+//             arr[k++] = neg[j++];
+//         }
+
+//         for(int l = 0; l < n; l++){
+//             System.out.print(arr[l] + " ");
+//         }
+//     }
+// }
+
+
+
+
+///////////// Problem -> 2
+// Given an array find the element that appears
+//  more the n/2 time if no such element return -1
+
+// I/P: 1 1 2 1 3 5 1
+// O/P: 1
+
+// I/P: 7
+// O/P: 7
+
+// I/P: 2 1 3
+// O/P: -1
+
+// public class problem{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         int count = 1;
+//         int can = arr[0];
+//         for(int i = 1; i < n; i++){
+//             if(arr[i] == can){
+//                 count++;
+//             }
+//             else{
+//                 count--;
+//             }
+//             if(count == 0){
+//                 can = arr[i];
+//                 count = 1;
+//             }
+//         }
+
+//         int freq = 0;
+//         for(int i = 0; i < n; i++){
+//             if(arr[i] == can){
+//                 freq++;
+//             }
+//         }
+//         if(freq > n/2){
+//             System.out.println(can);
+//         }else{
+//             System.out.println("-1");
+//         }
+//     }
+// }
+
+
+
+
+///////////// Problem -> 3
+// Given an array at each operation we can select any one element
+// and increase rest of n-1 elements by 1. we have to make all element 
+// equal performing such operation as many time you wish find the 
+// minimum number of operation needed
+
+// I/P: [1, 2, 3]
+// O/P: [3]
+
+// I/P: [4, 3, 4]
+// O/P: [2]
+
+// public class problem {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+//         int count = 0;
+
+//         while(true){
+
+//             boolean check = true;
+//             for(int i = 0; i < n; i++){
+//                 if(arr[i] != arr[0]){
+//                     check = false;
+//                     break;
+//                 }
+//             }
+//             if(check){
+//                 break;
+//             }
+
+//             int max = arr[0];
+//             int ind = 0;
+//             for(int i = 1; i < n; i++){
+//                 if(arr[i] > max){
+//                     max = arr[i];
+//                     ind = i;
+//                 }
+//             }
+            
+//             for(int i = 0; i < n; i++){
+//                 if(i != ind){
+//                     arr[i] += 1;
+//                 }
+//             }
+//             count++;
+            
+//         }
+//         System.out.println(count);
+//     }
+// }
+
+
+
+
+///////////// Problem -> 4
+// Given an unsorted array with both pos & neg 
+//elements find the smallest pos missing number.
+
+// I/P: 2 -3 4 1 1 7
+// O/P: 3
+
+// I/P: -8 0 -1 -4 -3
+// O/P: 1
+
+// public class problem{
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         int[] arr = new int[n];
+//         for(int i = 0; i < n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         int min = Integer.MAX_VALUE;
+//         int max = Integer.MIN_VALUE;
+//         for(int i = 0; i < n; i++){
+//             if(arr[i] > max){
+//                 max = arr[i];
+//             }
+//             if(arr[i] < min && arr[i] >= 0){
+//                 min = arr[i];
+//             }
+//         }
+//         if(max < 0 && min > 0){
+//             System.out.println("0");
+//             return;
+//         }
+//         if(max == 0 && min >= 0){
+//             max = max + 1;
+//             for(int i = 0; i < n; i++){
+//                 if(max == arr[i]){
+//                     max = max + 1;
+//                 }
+//             }
+//             System.out.println(max);
+//         }else{
+//             min = min + 1;
+//             for(int i = 0; i < n; i++){
+//                 if(min == arr[i]){
+//                     min = min + 1;
+//                 }
+//             }
+//             System.out.println(min);
+//         }
+//     }
+// }
