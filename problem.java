@@ -972,3 +972,39 @@ import java.util.*;
 //         }
 //     }
 // }
+
+
+
+
+///////////// Problem -> 2
+// Reverse a string:
+// public class problem {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String str = sc.next();
+
+//         // method - 1
+//         String rev = "";
+//         for(int i = str.length() - 1; i >= 0; i--){
+//             char ch = str.charAt(i);
+//             rev += ch;
+//         }
+
+//         System.out.println(rev);
+
+//         // method - 2
+//         int left = 0;
+//         int right = str.length() - 1;
+//         char[] ch = str.toCharArray();
+
+//         while(left <= right){
+//             char temp = ch[left];
+//             ch[left] = ch[right];
+//             ch[right] = temp;
+
+//             left++;
+//             right--;
+//         }
+//         System.out.println(ch);
+//     }
+// }
