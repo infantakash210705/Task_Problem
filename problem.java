@@ -884,3 +884,91 @@ import java.util.*;
 //         System.out.println(count);
 //     }
 // }
+
+// 18/05/2026
+///////////// Problem -> 1
+// Chef is planning to setup a secure password for his Codechef account. 
+// For a password to be secure the following conditions should be satisfied:
+// Password must contain at least one lower case letter 
+// [a−z];
+// Password must contain at least one upper case letter [A−Z] 
+// strictly inside (first or the last character won’t be considered)
+// Password must contain at least one digit 
+// [0−9] strictly inside;
+// Password must contain at least one special character from the set 
+// {
+// { '@', '#', '%', '&', '?' 
+// }
+// } strictly inside;
+// Password must be at least 
+// 10
+// 10 characters in length, but it can be longer.
+
+// Chef has generated several strings and now wants you to check whether 
+// the passwords are secure based on the above criteria. Please help Chef in doing so.
+
+// Input
+// First line will contain 
+// T
+// T, number of testcases. Then the testcases follow.
+// Each testcase contains of a single line of input, string 
+// S
+// S.
+// Output
+// For each testcase, output in a single line "YES" 
+// if the password is secure and "NO" if it is not.
+
+
+// public class problem {
+
+//     static boolean check(String str){
+//         if(str.length() < 10){
+//             return false;
+//         }
+
+//         boolean lower = false;
+//         boolean upper = false;
+//         boolean digit = false;
+//         boolean special = false;
+
+//         String s = "@#%&?";
+
+//         for(int i = 0; i < str.length(); i++){
+//             char ch = str.charAt(i);
+
+//             if(Character.isLowerCase(ch)){
+//                 lower = true;
+//             }
+
+//             if(i > 0 && i < str.length() - 1){
+//                 if(Character.isUpperCase(ch)){
+//                     upper = true;
+//                 }
+//                 if(Character.isDigit(ch)){
+//                     digit = true;
+//                 }
+//                 if(s.indexOf(ch) != -1){
+//                     special = true;
+//                 }
+//             }
+//         }
+
+//         return lower && upper && digit && special;
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int t = sc.nextInt();
+
+//         for(int i = 0; i < t; i++){
+//             String str = sc.next();
+
+//             if(check(str)){
+//                 System.out.println("YES");
+//             }
+//             else{
+//                 System.out.println("NO");
+//             }
+//         }
+//     }
+// }
